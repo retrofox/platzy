@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   </head>
   <body>
-    <p id="response"></p>
     <script src="/wpcom.js"></script>
     <script>
       var wpcom = WPCOM();
@@ -14,8 +13,6 @@
       .site('en.blog.wordpress.com')
       .postsList(function(err, data){
         if (err) throw err;
-
-        document.getElementById('response').textContent = JSON.stringify(data.posts);
         console.log(data);
       });
     </script>
